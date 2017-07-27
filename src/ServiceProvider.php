@@ -24,7 +24,7 @@ class ServiceProvider extends BaseServiceProvider
      *
      * @var string
      */
-    public $namespace = 'robrogers3/laravel-error-handler';
+    public $namespace = 'robrogers3/laravel-jsonaware-exception-handler';
 
     /**
      * Registers resources for the package.

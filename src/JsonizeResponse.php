@@ -38,12 +38,12 @@ trait JsonizeResponse
             return;
         }
 
-        $namespace   = 'robrogers3/laravel-error-handler';
+        $namespace   = 'robrogers3/laravel-jsonaware-exception-handler';
 
         $className = get_class($exception);
 
-        $info = collect($translator->get("$namespace::messages.exceptions.$className"));
-        
+        $info = collect($translator->get("$namespace::exceptionmessages.exceptions.$className"));
+
         $this->statusCode = $info->get('code', 500);
 
         $this->message = $info->get('message', 'Server Error: we cannot handle your request');
