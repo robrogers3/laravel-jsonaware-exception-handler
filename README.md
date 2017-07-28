@@ -15,9 +15,7 @@ $ composer require robrogers3/laravel-json-aware-exception-handler
 Add the service provider in your `config/app.php` :
 
 ```php
-...
 RobRogers3\LaravelExceptionHandler\ServiceProvider::class,
-...
 ```
 
 You then need to change your `App\Exceptions\Handler` class to extend `RobRogers3\LaravelExceptionHandler\JsonAwareExceptionHandler` rather than extending `Illuminate\Foundation\Exceptions\Handler`.
