@@ -11,7 +11,7 @@ return [
         ],
         \Symfony\Component\HttpKernel\Exception\HttpException::class => [
             'code' => 400,
-            'message' => 'Humm, something got lost in transmission',
+            'message' => 'Humm, something got lost in transmission.',
         ],
         \Illuminate\Database\Eloquent\ModelNotFoundException::class => [
             'code' => 404,
