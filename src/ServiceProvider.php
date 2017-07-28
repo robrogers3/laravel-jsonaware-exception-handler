@@ -31,8 +31,12 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function boot()
     {
-        $path = __DIR__ . '/../resources/lang/';
+        $path = __DIR__ . '/../resources/lang/en/exceptionmessages.php';
 
+        $this->publishes([
+            $path => resource_path("lang/vendor/{$this->namespace}/en/exceptionmessages.php"),
+        ]);
+        
         $this->loadTranslationsFrom($path, $this->namespace);
     }
 

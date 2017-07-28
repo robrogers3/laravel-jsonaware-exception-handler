@@ -2,7 +2,6 @@
 
 namespace RobRogers3\LaravelExceptionHandler;
 
-use Exception;
 use Illuminate\Translation\Translator as Lang;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
@@ -10,14 +9,26 @@ use Illuminate\Validation\ValidationException;
 
 trait JsonizeResponse
 {
-    public function renderJson($request, Exception $exception)
+
+    /**
+     * @param  \Illuminate\Http\Request $request
+     * @param  \Exception               $exception
+     *
+     * @return JsonResponse
+     */
+    public function renderJson($request, \Exception $exception)
     {
         $this->marshallResponseData($exception);
         
         return $this->prepareJsonResponse($exception);
     }
-    
-    protected function prepareJsonResponse(Exception $e)
+
+    /**
+     * @param  \Exception               $exception
+     *
+     * @return JsonResponse
+     */
+    protected function prepareJsonResponse(\Exception $e)
     {
         $headers = $this->isHttpException($e) ? $e->getHeaders() : [];
 
@@ -27,7 +38,12 @@ trait JsonizeResponse
             $headers
         );
     }
-    
+
+    /**
+     * @param  \Exception $exception
+     *
+     * @return JsonResponse
+     */
     protected function marshallResponseData(\Exception $exception)
     {
         $translator = resolve('translator');
@@ -46,11 +62,15 @@ trait JsonizeResponse
 
         $this->statusCode = $info->get('code', 500);
 
-        $this->message = $info->get('message', 'Server Error: we cannot handle your request');
+        $this->message = $info->get('message', 'Server Error: we cannot handle your request cause still broke');
 
-        return $this;
     }
 
+    /**
+     * @param  \Illuminate\Validation\ValidationException $exception
+     *
+     * @return void
+     */
     protected function collectValidationErrors(ValidationException $e)
     {
         //json doesnt need all the depths
