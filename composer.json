@@ -1,7 +1,6 @@
 {
     "name": "robrogers3/laravel-jsonaware-exception-handler",
     "description": "Error handler package for the Laravel 5 framework",
-    "homepage": "",
     "keywords": [ "errorhandler", "error", "exception", "debug", "laravel", "laravel 5", "whoops", "ajax" ],
     "license": "MIT",
     "authors": [
@@ -19,7 +18,10 @@
 	"psr/log": "^1.0"
     },
     "require-dev": {
-	"laravel/laravel": "5.3.*|5.4.*"
+	"phpunit/phpunit": "~5.7",
+        "laravel/laravel": "5.3.*|5.4.*",
+	"laravel/framework": "5.4.*",
+	"laravel/tinker": "~1.0"
     },
     "suggest": {
 	"filp/whoops": "Enables use of the debug displayer."
@@ -32,7 +34,7 @@
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
-        },
+        }
     },
     "extra": {
 	"branch-alias": {
