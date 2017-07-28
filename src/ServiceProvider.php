@@ -4,12 +4,6 @@ namespace RobRogers3\LaravelExceptionHandler;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-/**
- * Class ServiceProvider.
- *
-
- */
-
 class ServiceProvider extends BaseServiceProvider
 {
     /**
@@ -36,7 +30,7 @@ class ServiceProvider extends BaseServiceProvider
         $this->publishes([
             $path => resource_path("lang/vendor/{$this->namespace}/en/exceptionmessages.php"),
         ]);
-        
+
         $this->loadTranslationsFrom($path, $this->namespace);
     }
 
