@@ -1,6 +1,7 @@
-[![Latest Stable Version](https://img.shields.io/packagist/v/robrogers3/laravel-json-aware-exception-handler.svg?style=flat-square)](https://packagist.org/packages/robrogers3/laravel-json-aware-exception-handler)
+
+[![Packagist](https://img.shields.io/packagist/v/robrogers3/laravel-jsonaware-exception-handler.svg?style=flat-square)](https://packagist.org/packages/robrogers3/laravel-jsonaware-exception-handler)
 [![License](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)](license.md)
-[![Downloads](https://img.shields.io/packagist/dt/robrogers3/laravel-json-aware-exception-handler.svg?style=flat-square)](https://packagist.org/packages/robrogers3/laravel-json-aware-exception-handler)
+[![Downloads](https://img.shields.io/packagist/dt/robrogers3/laravel-jsonaware-exception-handler.svg?style=flat-square)](https://packagist.org/packages/robrogers3/laravel-jsonaware-exception-handler/stats)
 [![Build Status](https://api.travis-ci.org/robrogers3/laravel-jsonaware-exception-handler.svg?branch=master)](https://travis-ci.org/robrogers3/laravel-jsonaware-exception-handler)
 
 
