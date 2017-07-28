@@ -4,10 +4,10 @@
 
 Every one likes cool error message pages. Github has an awesome 404.
 
-And its very easy to created your own custom error pages for html responses.
+And it's very easy to create your own custom error pages for html responses.
 
 But doing this for Ajax and Json responses meant either doing something generic or figuring out your own solution.
-Often this meant returning a general error message, 'Sorry we cant handle your request'. Nothing informative.
+Often something like returning an error message like  'Sorry we cant handle your request'. Nothing informative.
 
 This package solves this problem.
 
