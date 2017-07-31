@@ -1,9 +1,7 @@
-
-[![Packagist](https://img.shields.io/packagist/v/robrogers3/laravel-jsonaware-exception-handler.svg?style=flat-square)](https://packagist.org/packages/robrogers3/laravel-jsonaware-exception-handler)
-[![License](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)](license.md)
-[![Downloads](https://img.shields.io/packagist/dt/robrogers3/laravel-jsonaware-exception-handler.svg?style=flat-square)](https://packagist.org/packages/robrogers3/laravel-jsonaware-exception-handler/stats)
-[![Build Status](https://api.travis-ci.org/robrogers3/laravel-jsonaware-exception-handler.svg?branch=master)](https://travis-ci.org/robrogers3/laravel-jsonaware-exception-handler)
-
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Software License][ico-license]](LICENSE.md)
+[![Total Downloads][ico-downloads]][link-downloads]
+[![Build Status][ico-travis]][link-travis]
 
 # Laravel Json Aware Exception Handler
 
@@ -111,3 +109,19 @@ Here's a general error handler for axios.
 	}
     }
 ```
+
+
+[ico-version]: https://img.shields.io/packagist/v/robrogers3/laravel-jsonaware-exception-handler.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/robrogers3/laravel-jsonaware-exception-handler/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/robrogers3/laraldap-auth.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/robrogers3/laraldap-auth.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/robrogers3/laravel-jsonaware-exception-handler.svg?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/robrogers3/laravel-jsonaware-exception-handler
+[link-travis]: https://travis-ci.org/robrogers3/laravel-jsonaware-exception-handler
+[link-scrutinizer]: https://scrutinizer-ci.com/g/robrogers3/laradauth/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/robrogers3/laraldap-auth
+[link-downloads]: https://packagist.org/packages/robrogers3/laravel-jsonaware-exception-handler
+[link-author]: https://github.com/robrogers3
+[link-contributors]: ../../contributors

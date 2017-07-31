@@ -1,7 +1,7 @@
 {
     "name": "robrogers3/laravel-jsonaware-exception-handler",
-    "description": "Error handler package for the Laravel 5 framework",
-    "keywords": [ "errorhandler", "error", "exception", "debug", "laravel", "laravel 5", "whoops", "ajax" ],
+    "description": "Laravel Json Aware Exception Handler",
+    "keywords": [ "exception handler","error handler", "laravel", "ajax", "json"],
     "license": "MIT",
     "authors": [
 	{
