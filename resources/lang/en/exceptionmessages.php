@@ -26,7 +26,7 @@ return [
             'message' => 'We really cannot find what you are looking for.'
         ],
         \Illuminate\Session\TokenMismatchException::class => [
-            'code' => 450,
+            'code' => 451,
             'message' => 'Can we reconnect again?',
         ],
         \Illuminate\Validation\ValidationException::class => [
