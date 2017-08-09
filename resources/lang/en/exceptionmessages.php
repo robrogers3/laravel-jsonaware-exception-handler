@@ -21,8 +21,12 @@ return [
             'code' => 404,
             'message' => 'We cannot find what you are looking for.',
         ],
+        \Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException::class => [
+            'code' => 404,
+            'message' => 'We really cannot find what you are looking for.'
+        ],
         \Illuminate\Session\TokenMismatchException::class => [
-            'code' => 401,
+            'code' => 450,
             'message' => 'Can we reconnect again?',
         ],
         \Illuminate\Validation\ValidationException::class => [
