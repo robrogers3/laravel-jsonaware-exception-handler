@@ -51,5 +51,12 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function register()
     {
+        if (env('USE_JSON_EXCEPTION_HANDLER', false)) {
+            $this->app->bind(
+                \Illuminate\Contracts\Debug\ExceptionHandler::class,
+                'RobRogers3\LaravelExceptionHandler\JsonAwareExceptionHandler'
+            );
+        }
+        
     }
 }

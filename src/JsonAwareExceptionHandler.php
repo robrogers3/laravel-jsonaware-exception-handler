@@ -9,7 +9,21 @@ use \Illuminate\Auth\AuthenticationException;
 class JsonAwareExceptionHandler extends BaseExceptionHandler
 {
     use JsonizeResponse;
-    
+
+    /**
+     * A list of the exception types that should not be reported.
+     *
+     * @var array
+     */
+    protected $dontReport = [
+        \Illuminate\Auth\AuthenticationException::class,
+        \Illuminate\Auth\Access\AuthorizationException::class,
+        \Symfony\Component\HttpKernel\Exception\HttpException::class,
+        \Illuminate\Database\Eloquent\ModelNotFoundException::class,
+        \Illuminate\Session\TokenMismatchException::class,
+        \Illuminate\Validation\ValidationException::class,
+    ];
+
     /**
      * @param  \Illuminate\Http\Request $request
      * @param  \Exception               $exception
