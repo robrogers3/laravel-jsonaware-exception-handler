@@ -27,13 +27,27 @@ $ composer require robrogers3/laravel-json-aware-exception-handler
 
 ## Configuration 
 
-Add the service provider in your `config/app.php` :
-
 ```php
 RobRogers3\LaravelExceptionHandler\ServiceProvider::class,
 ```
 
-You then need to change your `App\Exceptions\Handler` class to extend `RobRogers3\LaravelExceptionHandler\JsonAwareExceptionHandler` rather than extending `Illuminate\Foundation\Exceptions\Handler`. e.g.
+### Using it:
+
+Option 1: Update your .env file by adding this line:
+
+USE_JSON_EXCEPTION_HANDLER=true
+
+This will use the JsonHandler for json requests and the Laravel Exception Handler for regular requests.
+
+Note: it will completely ignore your app's Exception Handler. This means you can't override anything in this class.
+
+Option 2: Update your App Handler class to extend the JsonAwareExceptionHandler
+
+You do not have to update your .env file.
+
+The benefit of this is you can overide how the JsonAwareExceptionHandler
+
+To do this you  need to change your `App\Exceptions\Handler` class to extend `RobRogers3\LaravelExceptionHandler\JsonAwareExceptionHandler` rather than extending `Illuminate\Foundation\Exceptions\Handler`. e.g.
 
 ```php
 <?php
@@ -42,21 +56,26 @@ use RobRogers3\LaravelExceptionHandler\JsonAwareExceptionHandler;
 
 class Handler extends JsonAwareExceptionHandler
 {
-
+    
+}
 ```
 
-Then you need to run the artisan command:
+## Last Step
+
+You need to run this artisan command:
 
 ```bash
 $ artisan vendor:publish
 ```
 This will copy the exception messages to your local lang directory.
 
+
 ## Optional Setup.
 
 Open the exceptionmessages.php and change the messages you want to show for different http status codes.
 
 You may want to change 401 to something more clever or more corporate. It's up to you.
+
 
 ## Usage
 
