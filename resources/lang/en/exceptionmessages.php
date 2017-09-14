@@ -6,7 +6,7 @@ return [
             'message' => 'Sorry we dont know who you are.',
         ],
         \Illuminate\Auth\Access\AuthorizationException::class => [
-            'code' => 401,
+            'code' => 403,
             'message' => 'Sorry you are not authorized for this request.'
         ],
         \Symfony\Component\HttpKernel\Exception\HttpException::class => [
