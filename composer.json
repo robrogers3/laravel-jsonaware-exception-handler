@@ -1,36 +1,42 @@
 {
     "name": "robrogers3/laravel-jsonaware-exception-handler",
     "description": "Laravel Json Aware Exception Handler",
-    "keywords": [ "exception handler","error handler", "laravel", "ajax", "json"],
+    "keywords": [
+        "exception handler",
+        "error handler",
+        "laravel",
+        "ajax",
+        "json"
+    ],
     "license": "MIT",
     "authors": [
-	{
-	    "name": "Rob Rogers",
-	    "email": "robrogers@me.com"
-	}
+        {
+            "name": "Rob Rogers",
+            "email": "robrogers@me.com"
+        }
     ],
     "require": {
-	"php": ">=5.6.0",
-	"illuminate/contracts": "5.2.*|5.3.*|5.4.*|5.5.*",
-	"illuminate/support": "5.2.*|5.3.*|5.4.*|5.5.*",
-	"symfony/debug": "^2.7|^3.0",
-	"symfony/http-foundation": "^2.7|^3.0",
-	"psr/log": "^1.0"
+        "php": ">=5.6.0",
+        "illuminate/contracts": ">=5.3",
+        "illuminate/support": ">=5.3",
+        "symfony/debug": "^2.7|^3.0",
+        "symfony/http-foundation": "^2.7|^3.0",
+        "psr/log": "^1.0"
     },
     "require-dev": {
-	"doctrine/inflector": "1.1",
-	"phpunit/phpunit": "~5.7",
-        "laravel/laravel": "5.4.*|5.5.*",
-	"laravel/framework": "5.4.*|5.5.*",
-	"laravel/tinker": "~1.0"
+        "doctrine/inflector": "1.1",
+        "phpunit/phpunit": "~5.7",
+        "laravel/laravel": ">=5.3",
+        "laravel/framework": ">=5.3",
+        "laravel/tinker": "~1.0"
     },
     "suggest": {
-	"filp/whoops": "Enables use of the debug displayer."
+        "filp/whoops": "Enables use of the debug displayer."
     },
     "autoload": {
-	"psr-4": {
-	    "RobRogers3\\LaravelExceptionHandler\\": "src/"
-	}
+        "psr-4": {
+            "RobRogers3\\LaravelExceptionHandler\\": "src/"
+        }
     },
     "autoload-dev": {
         "psr-4": {
@@ -38,12 +44,12 @@
         }
     },
     "extra": {
-	"branch-alias": {
-	    "dev-master": "1.x-dev"
-	}
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
     },
     "config": {
-	"preferred-install": "dist"
+        "preferred-install": "dist"
     },
     "minimum-stability": "dev",
     "prefer-stable": true

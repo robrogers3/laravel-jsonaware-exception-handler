@@ -26,7 +26,7 @@ trait JsonizeResponse
     {
         $this->marshallResponseData($exception);
         
-        return $this->prepareJsonResponse($exception);
+        return $this->prepareJsonResponse($request, $exception);
     }
 
     /**
@@ -34,7 +34,7 @@ trait JsonizeResponse
      *
      * @return JsonResponse
      */
-    protected function prepareJsonResponse(\Exception $e)
+    protected function prepareJsonResponse($request, \Exception $e)
     {
         $headers = $this->isHttpException($e) ? $e->getHeaders() : [];
 
@@ -56,7 +56,7 @@ trait JsonizeResponse
 
         if ($exception instanceof ValidationException) {
             $this->collectValidationErrors($exception);
-
+            
             return;
         }
 
@@ -69,7 +69,7 @@ trait JsonizeResponse
         $this->statusCode = $info->get('code', 500);
 
         $this->message = $info->get('message', 'Server Error: we cannot handle your request.');
-        
+
         if ($exception instanceof MessagingException) {
             $this->setExceptionMessage($exception);
         }

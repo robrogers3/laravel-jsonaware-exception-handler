@@ -35,11 +35,11 @@ class JsonAwareExceptionHandler extends BaseExceptionHandler
         if ($request->wantsJson()) {
             return $this->renderJson($request, $exception);
         }
-        
+
         return parent::render($request, $exception);
     }
 
-        /**
+    /**
      * Convert an authentication exception into an unauthenticated response.
      *
      * @param  \Illuminate\Http\Request  $request
