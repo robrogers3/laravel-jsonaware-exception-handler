@@ -47,7 +47,8 @@ You do not have to update your .env file.
 
 The benefit of this is you can overide how the JsonAwareExceptionHandler
 
-To do this you  need to change your `App\Exceptions\Handler` class to extend `RobRogers3\LaravelExceptionHandler\JsonAwareExceptionHandler` rather than extending `Illuminate\Foundation\Exceptions\Handler`. e.g.
+To do this you  need to change your `App\Exceptions\Handler` class to extend `RobRogers3\LaravelExceptionHandler\JsonAwareExceptionHandler` rather than extending `Illuminate\Foundation\Exceptions\Handler`. Like so:
+
 
 ```php
 <?php
@@ -67,6 +68,7 @@ You need to run this artisan command:
 ```bash
 $ artisan vendor:publish
 ```
+
 This will copy the exception messages to your local lang directory.
 
 
@@ -87,9 +89,10 @@ Throwing this with a custom message allows you to display something detailed or 
 
 ### Client Side Usage with Ajax
 
-Here's where you want to take advantage of this. Take a look at this handling an ajax response error.
+Here's where you want to take advantage of this. 
 
-Here's a general error handler for axios.
+Take a look at this handling of an ajax response error.
+
 
 ```javascript
 	handle (error) {
@@ -100,7 +103,7 @@ Here's a general error handler for axios.
 	    //Usually it's a string
 		 if (typeof error.response.data == 'string') {
 		 
-		     return flash(error.response.data, 'danger');
+		     return alert(error.response.data);
 		 }
 
 		 //validation errors are an array
@@ -111,7 +114,7 @@ Here's a general error handler for axios.
 			     errors.push(datum);
 			 });
 		     
-		     return flash(errors.join("\n"), 'danger');
+		     return alert(errors.join("\n"));
 		 }
 
 		 //used to handle a teapot message 418
@@ -120,11 +123,11 @@ Here's a general error handler for axios.
 		 //you can tweek your teapot messages to have an extra 'message' property. Up to you.
 		 //by default it doesn't 
 		 if (error.response.status == 418 && error.response.data.message) {
-		     return flash(error.response.data, 'danger');
+		     return alert(error.response.data);
 		 }
 		 
 	     }
-	     return flash('We could not handle your request','danger');
+	     return alert('We could not handle your request');
 	}
     }
 ```
